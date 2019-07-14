@@ -62,7 +62,12 @@ public class createActivity extends AppCompatActivity {
             newguy.setMyUserName(text.getText().toString());
             newguy.setMyPassword(pass.getText().toString());
             dbHandler.addUser(newguy);
-            tt = Toast.makeText(createActivity.this, "New User Created Successfully", Toast.LENGTH_LONG);
+            tt = Toast.makeText(createActivity.this, "New User Created Successfully.", Toast.LENGTH_LONG);
+            tt.show();
+        }
+
+        else{
+            tt = Toast.makeText(createActivity.this, "Invalid User Creation. Please Try Again.", Toast.LENGTH_LONG);
             tt.show();
         }
     }

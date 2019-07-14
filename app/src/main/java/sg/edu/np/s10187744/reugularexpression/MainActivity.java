@@ -77,16 +77,16 @@ public class MainActivity extends AppCompatActivity {
             DBHandler dbHandler = new DBHandler((this), null, null, 1);
             UserData dbData = dbHandler.findUser(text.getText().toString());
             if (dbData.getMyPassword().equals(pass.getText().toString()) && dbData.getMyUserName().equals(text.getText().toString())){
-                tt = Toast.makeText(MainActivity.this, "Login successfully", Toast.LENGTH_LONG);
+                tt = Toast.makeText(MainActivity.this, "Valid. Login successfully", Toast.LENGTH_LONG);
                 tt.show();
             }
             else if (!dbData.getMyPassword().equals(pass.getText().toString())){
-                tt = Toast.makeText(MainActivity.this, "Password is wrong", Toast.LENGTH_LONG);
+                tt = Toast.makeText(MainActivity.this, "Invalid. Password is wrong", Toast.LENGTH_LONG);
                 tt.show();
             }
         }
         else{
-            tt = Toast.makeText(MainActivity.this, "Login fail", Toast.LENGTH_LONG);
+            tt = Toast.makeText(MainActivity.this, "Invalid. Login fail", Toast.LENGTH_LONG);
             tt.show();
         }
     }
